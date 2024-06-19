@@ -1,0 +1,140 @@
+:root {
+  --lightblue: #c4ecff;
+  --bg: #0c1374;
+  --primarytext: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Inter";
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f7f7f7;
+}
+header {
+  padding: 0rem 4rem;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+header h1 {
+  padding-top: 1rem;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--primarytext);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+#task-form {
+  display: flex;
+}
+
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#task-input {
+  flex: 1 1 0%;
+  background-color: var(--bg);
+  padding: 1rem;
+  border: 1px solid var(--primarytext);
+  margin-right: 1rem;
+  color: var(--primarytext);
+  font-size: 1.25rem;
+}
+#task-input::placeholder {
+  color: var(--primarytext);
+}
+#task-submit {
+  color: var(--primarytext);
+  font-size: 1.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.4s;
+  border: 1px solid var(--primarytext);
+  padding: 1rem;
+}
+
+#task-submit:hover {
+  transform: translateY(-5px);
+}
+
+#task-submit:active {
+  opacity: 0.6;
+}
+.container {
+  background: var(--bg);
+  flex: 0% 1 0%;
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem 0;
+  margin: 2rem auto;
+}
+
+main {
+  flex: 1 1 0%;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.task-list {
+  padding: 1rem;
+}
+
+#tasks .task {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bg);
+  border: 1px solid white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+#tasks .task .content {
+  flex: 1 1 0%;
+}
+#tasks .task .content .text {
+  color: var(--primarytext);
+  font-size: 1.13rem;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+#tasks .task .content .text:not(:read-only) {
+  color: var(--lightblue);
+}
+#tasks .task .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.task .actions button {
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0.5rem;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+.task .actions button:hover {
+  opacity: 0.8;
+}
+
+.task .actions button:active {
+  opacity: 0.6;
+}
+.task .actions .Edit {
+  color: white;
+}
+.task .actions .Delete {
+  color: rgb(240, 89, 52);
+}
